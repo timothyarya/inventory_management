@@ -8,8 +8,38 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-title: var(--font-syne), sans-serif;
+  /* --font-sans: var(--font-geist-sans); */
   --font-mono: var(--font-geist-mono);
+
+  /* ==========================================
+      ULTRA-PREMIUM DARK MODE (JET BLACK)
+     ========================================== */
+    
+  /* 1. Latar Belakang Utama (Dasar) */
+  --color-dark-bg: #050505;              /* Hitam absolut murni untuk kanvas paling belakang */
+
+  /* 2. Tingkatan Permukaan (Surfaces) - Untuk Kedalaman Visual */
+  --color-dark-surface-1: #0D0F12;       /* Hitam obsidian halus untuk Sidebar / Navbar */
+  --color-dark-surface-2: #14171C;       /* Karbon gelap untuk kotak Card utama / Baris Tabel */
+  --color-dark-surface-3: #1C2026;       /* Karbon medium untuk Kotak Input / Baris Header Tabel */
+  --color-dark-surface-4: #252B33;       /* Karbon terang untuk Tombol Sekunder / State Hover */
+  --color-dark-surface-5: #2E3540;       /* Sangat terang untuk Badge / Tooltip / Garis fokus */
+
+  /* 3. Tingkatan Teks (Typography) */
+  --color-dark-txt-primary: #F8FAFC;     /* Putih kristal (Slate 50) - Sangat kontras untuk Judul & Angka */
+  --color-dark-txt-secondary: #94A3B8;   /* Abu-abu mutiara (Slate 400) - Untuk deskripsi & teks biasa */
+  --color-dark-txt-muted: #57657A;       /* Abu-abu redup (Slate 600) - Untuk info kecil, tgl, placeholder */
+
+  /* 4. Pembatas (Borders) */
+  --color-dark-border-soft: #181D24;     /* Garis pembatas yang sangat menyatu, halus di mata */
+  --color-dark-border-hard: #28303B;     /* Garis pembatas tegas untuk elemen aktif / fokus */
+
+  /* 5. Opsi Warna Aksen Biru Elegan (Pilih salah satu sesuai selera) */
+  --color-blue-deep: #1D4ED8;            /* Opsi A: Biru Malam yang solid dan tegas */
+  --color-blue-royal: #3B82F6;           /* Opsi B: Biru Modern standar profesional (Rekomendasi) */
+  --color-blue-electric: #60A5FA;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +52,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
