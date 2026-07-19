@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <nav
-        className="flex-none flex flex-col items-start justify-between w-1/8 bg-dark-surface-1 border-r border-dark-border-soft p-2 gap-5"
+        className="flex-none flex flex-col shrink-0 items-start justify-between w-60 bg-dark-surface-1 border-r border-dark-border-soft p-2 gap-5"
         >  
             <Link
             href="/"
@@ -30,22 +30,28 @@ export default function Navbar() {
                             <Link
                             key={page.path}
                             href={page.path}
-                            className={`group w-full flex flex-row items-center justify-start gap-3 text-dark-txt-primary bg-light-surface-secondary px-4 py-3 hover:bg-dark-surface-2 hover:text-blue-royal rounded-lg transition-all duration-300 ${isActive ? "bg-dark-surface-3 shadow-[0px_0px_24px_rgba(0,0,0,0.5)] shadow-blue-royal/10" : ""} cursor-pointer`}
+                            className={`group w-full flex flex-row items-center justify-start gap-3  px-4 py-3 rounded-lg transition-all duration-200
+                                ${isActive ? 
+                                "bg-dark-surface-3 text-blue-royal shadow-[0px_0px_24px_rgba(0,0,0,0.5)] shadow-blue-royal/10" : 
+                                "text-dark-txt-primary bg-light-surface-secondary hover:bg-dark-surface-2 hover:text-blue-royal"
+                                }
+                            `}
                             >
                                 {IconComponent && (
                                     <IconComponent 
                                     size={18}
                                     strokeWidth={2}
-                                    className={`group-hover:text-blue-royal transition-all duration-300 ${isActive ? "text-blue-royal" : ""}`}
+                                    className={`transition-all duration-200`}
                                     />
                                 )}
                                 <span
-                                className={`group-hover:text-blue-royal transition-all duration-300 ${isActive ? "text-blue-royal" : ""}`}
+                                className={`transition-all duration-200`}
                                 >{page.name}</span>
                             </Link>
                         )
                     })
                 }
+                {/* group-hover:text-blue-royal transition-all duration-200 ${isActive ? "text-blue-royal" : ""} */}
             </div>
             <div
             className="flex flex-row items-center justify-center h-16 bg-light-surface-secondary w-full p-3 gap-4 rounded-xl"
@@ -54,16 +60,18 @@ export default function Navbar() {
                 <div
                 className="flex flex-row gap-2"
                 >
-                    <button
-                    className="bg-dark-surface-2 text-dark-txt-secondary px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-[0px_0px_24px_rgba(0,0,0,0.5)] hover:shadow-blue-royal/10 hover:text-blue-royal hover:bg-dark-surface-3 cursor-pointer"
+                    <Link
+                    href="/login"
+                    className="bg-dark-surface-2 text-dark-txt-secondary px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-[0px_0px_24px_rgba(0,0,0,0.5)] hover:shadow-blue-royal/10 hover:text-blue-royal hover:bg-dark-surface-3"
                     >
                         Login
-                    </button>
-                    <button
-                    className="bg-dark-surface-4 text-dark-txt-primary px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-[0px_0px_24px_rgba(0,0,0,0.5)] hover:shadow-blue-royal/10 hover:text-blue-royal hover:bg-dark-surface-5 cursor-pointer"
+                    </Link>
+                    <Link
+                    href="/signup"
+                    className="bg-dark-surface-4 text-dark-txt-primary px-3 py-2 rounded-lg transition-all duration-300 hover:shadow-[0px_0px_24px_rgba(0,0,0,0.5)] hover:shadow-blue-royal/10 hover:text-blue-royal hover:bg-dark-surface-5"
                     >
                         Signup
-                    </button>
+                    </Link>
                 </div>
             </div>
         </nav>

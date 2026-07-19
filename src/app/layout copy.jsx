@@ -34,9 +34,13 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${interFont.variable} ${syneFont.variable} h-full antialiased`}
     >
       <body 
-      className="min-h-dvh"
+      className="min-h-dvh w-full flex flex-row"
       >
-        {children}
+        <main
+          className="flex flex-col justify-start items-center min-h-dvh px-20 py-17 bg-dark-bg w-full"
+        >
+          {children}
+        </main>
       </body>
     </html>
   );

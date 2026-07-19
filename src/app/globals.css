@@ -54,3 +54,34 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* ==========================================
+  REDESIGN SCROLLBAR GLOBAL (MODERN & CLEAN)
+   ========================================== */
+body, .overflow-y-auto, .overflow-y-scroll {
+  /* Format: scrollbar-color: [Warna Tracker/Tombol] [Warna Jalur/Background] */
+  scrollbar-color: var(--color-dark-surface-3) var(--color-dark-bg);
+  
+  /* Membuat ukuran scrollbar menjadi lebih tipis dan minimalis */
+  scrollbar-width: thin;
+}
+
+/* Fallback untuk Browser Lama (Chrome/Safari/Edge berbasis Webkit) */
+::-webkit-scrollbar {
+  width: 8px; /* Lebar scrollbar vertikal */
+  height: 8px; /* Tinggi scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-bg); /* Warna jalur scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-surface-3); /* Warna tombol scrollbar */
+  border-radius: 9999px; /* Membuat sudutnya melengkung halus */
+  border: 2px solid var(--color-dark-bg); /* Efek padding buatan agar thumb terlihat proporsional */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-surface-5); /* Warna saat kursor menyorot scrollbar */
+}

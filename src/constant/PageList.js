@@ -1,19 +1,19 @@
-import { Home, Box, ArrowLeftRight, Settings } from "lucide-react";
+import { LayoutDashboard, Box, ArrowLeftRight, Settings } from "lucide-react";
 
 export const PageList = [
     {
-        name: "Home",
-        path: "/",
-        icon: Home
+        name: "Dashboard",
+        path: "/123/dashboard",
+        icon: LayoutDashboard
     },
     {
         name: "Inventory",
-        path: "/inventory",
+        path: "/123/inventory",
         icon: Box
     },
     {
         name: "Rent",
-        path: "/rent",
+        path: "/123/rent",
         icon: ArrowLeftRight
     },
 ];
