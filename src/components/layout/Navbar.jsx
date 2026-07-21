@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return (
         <nav
-        className="flex-none flex flex-col shrink-0 items-start justify-between w-60 bg-dark-surface-1 border-r border-dark-border-soft p-2 gap-5"
+        className="flex-none flex flex-col shrink-0 items-start justify-between w-60 bg-dark-surface-1 border-r border-dark-border-soft p-2 gap-5 h-dvh"
         >  
             <Link
             href="/"
